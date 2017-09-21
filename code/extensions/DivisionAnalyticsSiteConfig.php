@@ -16,8 +16,9 @@ class DivisionAnalyticsSiteConfig extends DataExtension {
 	);
 
 	public function updateCMSFields(FieldList $fields) {
-		$fields->addFieldToTab('Root.Main', new TextField('GoogleAnalyticsID', 'Google Analytics ID (UA-XXXXX-X)'), 'PosterImage');
-		$fields->addFieldToTab('Root.Main', new CheckboxField('DisableUITracking', 'Disable UI Tracking Utility'), 'PosterImage');
+		$fields->addFieldToTab('Root.Analytics', new TextField('GoogleAnalyticsID', 'Google Analytics ID (UA-XXXXX-X)'));
+		$fields->addFieldToTab('Root.Analytics', new CheckboxField('DisableUITracking', 'Disable UI Tracking Utility'));
+
 
 		return $fields;
 	}

@@ -1,6 +1,9 @@
 SiteConfig:
   extensions:
     - DivisionAnalyticsSiteConfig
-Page_Controller:
+Page:
   extensions:
     - DivisionAnalyticsPageExtension
+Page_Controller:
+  extensions:
+    - DivisionAnalyticsPageControllerExtension
