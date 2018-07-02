@@ -1,7 +1,7 @@
 {  
    "name":"md/division-analytics",
    "description":"The University of Iowa Division of Student Life Analytics",
-   "type":"silverstripe-module",
+   "type":"silverstripe-vendormodule",
    "minimum-stability":"dev",
    "require":{  
       "php":">=5.3.2",
