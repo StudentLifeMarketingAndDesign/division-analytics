@@ -1,4 +1,8 @@
 <?php
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\SiteConfig\SiteConfig;
+use SilverStripe\Forms\LiteralField;
 class DivisionAnalyticsPageExtension extends DataExtension {
 
 	public function updateCMSFields(FieldList $f){

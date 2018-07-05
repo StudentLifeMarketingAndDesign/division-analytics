@@ -1,5 +1,5 @@
 <?php
-
+use SilverStripe\Core\Extension;
 	class DivisionAnalyticsPageControllerExtension extends Extension {
 		
 		public function Analytics(){
