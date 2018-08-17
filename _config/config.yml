@@ -1,9 +1,9 @@
-SiteConfig:
+Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - DivisionAnalyticsSiteConfig
 Page:
   extensions:
     - DivisionAnalyticsPageExtension
-Page_Controller:
+PageController:
   extensions:
     - DivisionAnalyticsPageControllerExtension

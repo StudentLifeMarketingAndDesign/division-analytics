@@ -1,5 +1,8 @@
 <?php
 use SilverStripe\Core\Extension;
+use SilverStripe\Control\Director;
+use SilverStripe\SiteConfig\SiteConfig;
+use SilverStripe\View\ArrayData;
 	class DivisionAnalyticsPageControllerExtension extends Extension {
 		
 		public function Analytics(){
