@@ -4,6 +4,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\SiteConfig\SiteConfig;
+use SilverStripe\View\Parsers\URLSegmentFilter;
 
 class DivisionAnalyticsSiteConfig extends DataExtension {
 
