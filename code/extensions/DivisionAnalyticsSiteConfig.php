@@ -30,7 +30,7 @@ class DivisionAnalyticsSiteConfig extends DataExtension {
 	}
 
 	public function UITrackingID() {
-		$siteName = $this->InternalAnalyticsID;
+		$siteName = $this->owner->InternalAnalyticsID;
 		$prefix = 'uiowa.edu.md-';
 		$filteredSiteName = $this->generateNiceSiteName($siteName);
 		return $prefix . $filteredSiteName;
