@@ -1,23 +1,13 @@
 <% if not $SiteConfig.DisableUITracking %>
-  <script type="text/javascript">
-  ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-     p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-     };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-     n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//radar-cdn.its.uiowa.edu/sp-static-js/2.7.2/radar-tracker.js","snowplow"));
-
-  window.snowplow('newTracker', 'sp', 'radar-collector.its.uiowa.edu', {
-     appId: '$SiteConfig.UITrackingID',
-     cookieDomain: '.uiowa.edu',
-     respectDoNotTrack: true,
-     post: true,
-     contexts: {
-         webPage: true,
-         performanceTiming: true
-     }
-  });
-
-  window.snowplow('trackPageView');
-  </script>
+<%-- Google Tag: GTM-K7W3K5P --%>
+<%-- Universal GA ID: UA-93022130-1 --%>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K7W3K5P');</script>
+<!-- End Google Tag Manager -->
 <% end_if %>
 <% if $SiteConfig.GoogleAnalyticsID %>
 <script>
