@@ -16,4 +16,12 @@ class DivisionAnalyticsPageControllerExtension extends Extension {
 			return $data->renderWith('DivisionAnalytics');
 		}
 	}
+
+	public function GlobalAnalytics() {
+		if (Director::isLive()) {
+			$data = new ArrayData();
+			return $data->renderWith('GlobalAnalytics');
+		}
+	}
+
 }

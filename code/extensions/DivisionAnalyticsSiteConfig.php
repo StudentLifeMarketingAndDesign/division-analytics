@@ -3,14 +3,13 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\SiteConfig\SiteConfig;
-use SilverStripe\View\Parsers\URLSegmentFilter;
 
 class DivisionAnalyticsSiteConfig extends DataExtension {
 
 	private static $db = array(
 		'GoogleAnalyticsID' => 'Text',
 		'DisableUITracking' => 'Boolean',
+		//Leaving old internal analytics id in db in case we need to roll back:
 		'InternalAnalyticsID' => 'Text',
 	);
 
@@ -29,31 +28,4 @@ class DivisionAnalyticsSiteConfig extends DataExtension {
 		return $fields;
 	}
 
-	public function UITrackingID() {
-		$siteName = $this->owner->InternalAnalyticsID;
-		$prefix = 'uiowa.edu.md-';
-		$filteredSiteName = $this->generateNiceSiteName($siteName);
-		return $prefix . $filteredSiteName;
-
-	}
-
-	public function generateNiceSiteName($name) {
-		$filter = URLSegmentFilter::create();
-		$filteredSiteName = $filter->filter($name);
-
-		return $filteredSiteName;
-	}
-
-	public function requireDefaultRecords() {
-		parent::requireDefaultRecords();
-
-		$config = SiteConfig::current_site_config();
-		$siteName = $config->Title;
-
-		if (!$config->InternalAnalyticsID) {
-			$config->InternalAnalyticsID = $this->generateNiceSiteName($siteName);
-			$config->write();
-		}
-
-	}
 }
